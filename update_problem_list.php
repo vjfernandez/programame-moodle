@@ -8,7 +8,9 @@ $url =str_replace("\\", "/", $myUriBase."jsonuser.php?id=");
 $sql ="select id from usuarios";
 $result = $conn -> query($sql);
 while ($row = $result->fetch_assoc()) {
-        file_get_contents( $url . $row["id"]);
+        $tUrl=$url . $row["id"];
+        echo $tUrl."<br>";
+        file_get_contents( $tUrl);
 }
 
 
