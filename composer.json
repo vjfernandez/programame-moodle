@@ -1,0 +1,12 @@
+{
+    "name": "victor/programame",
+    "require": {
+        "duzun/hquery": "^2.2"
+    },
+    "authors": [
+        {
+            "name": "Víctor J. Fernández",
+            "email": "victor.fernandezgil@educa.madrid.org"
+        }
+    ]
+}
