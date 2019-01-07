@@ -25,7 +25,7 @@ while ($row = $result->fetch_assoc()) {
 }
 $result->close();
 
-$sql = "select * from usuarios order by nombre";
+$sql = "select * from usuarios order by tipo, nombre";
 $result = $conn->query($sql);
 while ($row = $result->fetch_assoc()):
     $problemasResueltos = json_decode($row["problemas"]);
@@ -34,7 +34,7 @@ while ($row = $result->fetch_assoc()):
     ?>
 	    <li class="list-group-item" title="<?=implode(", ", $intersect)?>">
             <a href="index.php?aid=<?=$row["id_moodle"]?>" target="_blank"><?=$row["nombre"]?></a>
-	        <span class="badge badge-primary"><?=$cuenta?></span>
+	        <span class="badge badge-<?=($row["tipo"]=="a"?"primary":"secondary")?>"><?=$cuenta?></span>
 	    </li>
 	<?php
 endwhile;
