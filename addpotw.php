@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
     $cuenta = $row["cuenta"];
 }
 if ($cuenta == 0) {
-    for ($i = $texto; $i < $texto + 5; $i += 1) {
+    for ($i = $texto; $i < $texto + 3; $i += 1) {
         $doc = hQuery::fromFile('https://www.aceptaelreto.com/problem/statement.php?id='.$i);
         if ($doc) {
             $title = $doc->find('h1');
