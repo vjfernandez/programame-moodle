@@ -4,6 +4,8 @@ $base = dirname(__FILE__); // now $base contains "app"
 include $base.'/vendor/autoload.php';
 include $base.'/db.php';
 
+use \duzun\hQuery;
+
 function insertar ($num, $titulo) {
     global $conn;
     $sql ="INSERT INTO problemas(id, titulo) values ($num, '$titulo')";

@@ -5,7 +5,7 @@ if (!isset($userid)) {
     die("no userid");
 }
 include './vendor/autoload.php';
-$doc = hQuery::fromFile('https://www.aceptaelreto.com/user/profile.php?id='.$userid);
+$doc = \duzun\hQuery::fromFile('https://www.aceptaelreto.com/user/profile.php?id='.$userid);
 if (!$doc) {
     die ("No doc found");
 }
